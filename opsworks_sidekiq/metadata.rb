@@ -1,5 +1,5 @@
-maintainer       "Draker"
-maintainer_email "devops@drakerenergy.com"
+maintainer       "Pranav"
+maintainer_email "pranav@box8.in"
 license          "MIT"
 description      "Configure and deploy sidekiq on opsworks."
 

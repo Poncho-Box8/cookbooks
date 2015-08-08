@@ -1,6 +1,7 @@
-execute “docs_generate" do
-  user “deploy"
-  cwd "/root”
-  command "/bin/ls”
+bash "generate_docs" do
+  user "root"
+  cwd "#{deploy[:deploy_to]}/current"
+  code <<-EOH
+    bundle exec rake swagger:docs RAILS_ENV=production
+  EOH
 end
-

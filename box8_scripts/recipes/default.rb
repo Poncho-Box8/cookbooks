@@ -1,10 +1,12 @@
-include_recipe 'deploy'
-node[:deploy].each do |application, deploy|
-bash "generate_docs" do
-  user "root"
-  cwd "#{deploy[:deploy_to]}/current/config"
-  code <<-EOH
-    bundle exec rake swagger:docs RAILS_ENV=production
-  EOH
+cookbook_file "/root/code/cookbooks/box8_scripts/files/script.rb" do
+  source "script.rb"
+  mode 0755
 end
+
+
+
+
+execute "script.rb" do
+  cwd "/tmp"
+  command "./script.rb"
 end

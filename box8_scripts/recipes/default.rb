@@ -1,6 +1,6 @@
 include_recipe 'deploy'
 node[:deploy].each do |application, deploy|
-cookbook_file "/root/code/cookbooks/box8_scripts/files/script.rb" do
+cookbook_file "../files/script.rb" do
   source "script.rb"
   mode 0755
 end

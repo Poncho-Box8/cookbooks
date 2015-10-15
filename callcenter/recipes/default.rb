@@ -36,6 +36,3 @@ end
 execute 'install_grunt_cli' do
   command 'npm install -g grunt-cli'
 end
-~   
-~   
-

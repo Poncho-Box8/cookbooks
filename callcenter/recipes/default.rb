@@ -1,4 +1,3 @@
-include recipe apt 
 package 'nginx' do
   action :install
 end

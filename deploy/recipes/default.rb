@@ -1,4 +1,4 @@
-cookbook_file "/tmp/lib-installer.sh" do
+cookbook_file "/tmp/deployer.sh" do
   source "deployer.sh"
   mode 0755
 end

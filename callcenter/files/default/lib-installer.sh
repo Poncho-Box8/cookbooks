@@ -1,3 +1,4 @@
+apt-get update -y
 apt-get install nodejs
 ln -s /usr/bin/nodejs /usr/bin/node
 apt-get install npm -y

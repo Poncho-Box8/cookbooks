@@ -1,5 +1,5 @@
 cookbook_file "/tmp/installer.sh" do
-  source "lib-installer.sh"
+  source "installer.sh"
   mode 0755
 end
 

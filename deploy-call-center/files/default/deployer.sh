@@ -1,13 +1,12 @@
-apt-get update -y
-apt-get install nodejs
-ln -s /usr/bin/nodejs /usr/bin/node
-apt-get install npm -y
-npm install npm -g
-npm install npm -g  cd /usr/local/lib/node_modules
-curl registry.npmjs.com/npm/-/npm-2.12.0.tgz |tar xz --transform="s:^package:npm:"
-npm i npm -g
-npm install -g yo
-npm install -g bower
-npm install -g grunt 
-npm install -g grunt-cli
-
+cd /srv/www/statc_app/current/ && bower install --allow-root --config.interactive=false
+cd /srv/www/statc_app/current/ && npm install
+cd /srv/www/statc_app/current/ && grunt 
+rm -rfv /opt/tmp_store/
+mkdir /opt/tmp_store/
+cp -r /srv/www/statc_app/current/* /opt/tmp_store/
+rm -rfv /srv/www/statc_app/current/*
+rm -rfv /srv/www/statc_app/current/.*
+cp -r /opt/tmp_store/dist/* /srv/www/statc_app/current/
+cp -r /opt/tmp_store/app/fonts/* /srv/www/statc_app/current/fonts/
+cp -r /opt/tmp_store/bower_components/font-awesome/fonts/* /srv/www/statc_app/current/fonts/
+chown deploy:www-data /srv/www/statc_app/current/*

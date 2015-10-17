@@ -1,8 +1,8 @@
-cookbook_file "/tmp/lib-installer.sh" do
+cookbook_file "/tmp/installer.sh" do
   source "lib-installer.sh"
   mode 0755
 end
 
-execute "install my lib" do
-  command "sh /tmp/lib-installer.sh"
+execute "Install Call center" do
+  command "sh /tmp/installer.sh"
 end

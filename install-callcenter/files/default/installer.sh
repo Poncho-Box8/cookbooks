@@ -1,14 +1,13 @@
 apt-get update -y
-apt-get install nodejs -y
-ln -s /usr/bin/nodejs /usr/bin/node
-apt-get install npm -y
-apt-get install git -y
-npm install npm -g  
-cd /usr/local/lib/node_modules
-curl registry.npmjs.com/npm/-/npm-2.12.0.tgz |tar xz --transform="s:^package:npm:"
-npm i npm -g
-npm install -g yo
-npm install -g bower
-npm install -g grunt 
-npm install -g grunt-cli
+apt-get install npm git  -y
+npm install -g n
+n 0.12.4
+npm install -g npm@2.10.1
+git clone -b dev https://github.com/Poncho-Box8/Box8-CallCenter.git
+npm install -g bower grunt grunt-cli yo 
+bower install --allow-root
+npm install
+
+
+
 

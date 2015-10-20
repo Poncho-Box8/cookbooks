@@ -4,7 +4,7 @@ cd /srv/www/website_box8/current && npm install
 cd /srv/www/website_box8/current && grunt 
 rm -rfv /opt/tmp_store/
 mkdir /opt/tmp_store/
-cp -r /srv/www/website_box8/current/* /opt/tmp_store/
+cp -r /srv/www/website_box8/current/ /opt/tmp_store/
 rm -rfv /srv/www/website_box8/current/* 
 rm -rfv /srv/www/website_box8/current/.*
 cp -r /opt/tmp_store/dist/* /srv/www/website_box8/current/

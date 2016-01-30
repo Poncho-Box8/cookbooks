@@ -5,7 +5,7 @@ bash "generate_docs" do
   cwd "#{deploy[:deploy_to]}/current/"
   code <<-EOH
     bundle exec rake swagger:docs RAILS_ENV=production
-    bundle exec ruby kafka_order_controller.rb start
+    bundle exec ruby kafka_reader_controller.rb start
   EOH
 end
 end

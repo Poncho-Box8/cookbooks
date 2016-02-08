@@ -6,9 +6,8 @@ bash "generate_docs" do
   cwd "#{deploy[:deploy_to]}/current/"
   code <<-EOH
     bundle exec rake swagger:docs RAILS_ENV=production
-    KAFKA_API=#{kafka_api}
     /usr/bin/pkill -f kafka_reader.rb
-    bundle exec ruby kafka_reader_controller.rb start
+    KAFKA_API=#{kafka_api} bundle exec ruby kafka_reader_controller.rb start
   EOH
 end
 end
